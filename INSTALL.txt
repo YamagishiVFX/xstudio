@@ -1,0 +1,49 @@
+xSTUDIO - Portable Windows Distribution
+========================================
+
+This is a portable, no-install-required package. It does NOT require
+administrator rights to set up or run.
+
+Getting started
+----------------
+
+1. Extract this ZIP archive to any folder you like (e.g. your Desktop,
+   Documents, or a USB drive).
+
+2. Run xSTUDIO directly:
+
+       bin\xstudio.exe
+
+   That's it - no installation step is needed.
+
+Optional: add a Start Menu shortcut
+------------------------------------
+
+If you'd like to launch xSTUDIO from the Windows Start Menu, double-click:
+
+       create_start_menu_shortcut.bat
+
+This adds a per-user Start Menu shortcut pointing at the extracted
+bin\xstudio.exe. It only writes to your own user profile
+(%APPDATA%\Microsoft\Windows\Start Menu\Programs), so it also requires
+no administrator rights.
+
+Note: if you later move or delete this folder, the shortcut will stop
+working. Re-run the script from the new location, or delete the old
+shortcut from your Start Menu.
+
+Uninstalling
+------------
+
+There is no installer/uninstaller. To remove xSTUDIO:
+
+1. Delete the extracted folder.
+2. If you created a Start Menu shortcut, delete it from:
+       %APPDATA%\Microsoft\Windows\Start Menu\Programs\xSTUDIO.lnk
+
+Need an installer instead?
+---------------------------
+
+An NSIS-based Windows installer (which sets up the Start Menu shortcut
+and file associations automatically, but requires administrator rights)
+is also available as xSTUDIO-<version>-win64.exe.

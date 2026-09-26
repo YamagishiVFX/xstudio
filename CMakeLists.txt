@@ -314,6 +314,13 @@ endif()
 
 if (WIN32)
 
+  # For portable (ZIP) distributions, which run no install script on the
+  # target machine, this lets the user opt in to a Start Menu shortcut
+  # without needing administrator rights (unlike the NSIS installer, which
+  # sets this up automatically as part of its elevated install).
+  install(PROGRAMS scripts/windows/create_start_menu_shortcut.bat DESTINATION .)
+  install(FILES INSTALL.txt DESTINATION .)
+
   include(InstallRequiredSystemLibraries)
 
   set(CPACK_PACKAGE_VERSION ${XSTUDIO_GLOBAL_VERSION})
